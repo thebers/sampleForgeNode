@@ -22,8 +22,8 @@ html, body {
     width: 100%;
   }
 
-  .myAwesomeToolbarButton {
-    background-image: url(/img/myAwesomeIcon.png);
+  .bensAwesomeToolbarButton {
+    background-image: url(/img/bensAwesomeIcon.png);
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;
