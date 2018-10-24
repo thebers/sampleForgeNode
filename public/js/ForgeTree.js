@@ -1,3 +1,5 @@
+var thisToken;
+
 $(document).ready(function () {
     prepareAppBucketTree();
     $('#refreshBuckets').click(function () {
@@ -102,7 +104,9 @@ $(document).ready(function () {
               else $("#forgeViewer").html('The translation job still running: ' + res.progress + '. Please try again in a moment.');
             
               //added so I can retrieve the access_token manually... need to learn how to do it automatically
-              console.log(access_token)
+              console.log(access_token);
+              thisToken = access_token;
+              console.log("this is thisToken", thisToken)
               //
             
             },

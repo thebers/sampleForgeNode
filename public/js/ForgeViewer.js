@@ -5,7 +5,7 @@ var thisURN = "yo!!";
 
 function launchViewer(urn) {
   //ben added to test
-  var thisURN = urn;
+  thisURN = urn;
   //
 
   var options = {
@@ -22,19 +22,11 @@ function launchViewer(urn) {
     
     //ben added to test
     console.log(urn)
-    const thisURN = urn
     console.log('thisURN = ',thisURN)
     //
   });
 }
 
-//testing to see if I can create a function here that will store the URN that I can call from FORGExls...this did not work
-//because ForgeViewer is not defined in the extension
-
-function logURN(thisURN, urn){
-  console.log(thisURN)
-  console.log(urn)
-}
 
 function onDocumentLoadSuccess(doc) {
   // We could still make use of Document.getSubItemsWithProperties()

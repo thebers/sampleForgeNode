@@ -8,6 +8,7 @@ const config = require('../../config');
  * @returns {AuthClientTwoLegged} 2-legged authentication client.
  */
 function getClient(scopes) {
+    console.log(scopes);
     const { client_id, client_secret } = config.credentials;
     return new AuthClientTwoLegged(client_id, client_secret, scopes || config.scopes.internal);
 }
