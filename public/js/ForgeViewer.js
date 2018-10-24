@@ -1,6 +1,6 @@
 var viewerApp;
 //added urn as a global variable in an attempt to reach it in the xls exporter
-var thisURN;
+var thisURN = "yo!!";
 //
 
 function launchViewer(urn) {
@@ -22,10 +22,18 @@ function launchViewer(urn) {
     
     //ben added to test
     console.log(urn)
-    thisURN = urn
-    console.log(thisURN)
+    const thisURN = urn
+    console.log('thisURN = ',thisURN)
     //
   });
+}
+
+//testing to see if I can create a function here that will store the URN that I can call from FORGExls...this did not work
+//because ForgeViewer is not defined in the extension
+
+function logURN(thisURN, urn){
+  console.log(thisURN)
+  console.log(urn)
 }
 
 function onDocumentLoadSuccess(doc) {
