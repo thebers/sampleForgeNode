@@ -100,6 +100,11 @@ $(document).ready(function () {
             success: function (res) {
               if (res.status === 'success') launchViewer(urn);
               else $("#forgeViewer").html('The translation job still running: ' + res.progress + '. Please try again in a moment.');
+            
+              //added so I can retrieve the access_token manually... need to learn how to do it automatically
+              console.log(access_token)
+              //
+            
             },
             error: function (err) {
               var msgButton = 'This file is not translated yet! ' +
