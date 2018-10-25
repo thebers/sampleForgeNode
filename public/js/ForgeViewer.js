@@ -40,7 +40,7 @@ function onDocumentLoadSuccess(doc) {
   }
 
   // Choose any of the available viewables
-  viewerApp.selectItem(viewables[1].data, onItemLoadSuccess, onItemLoadFail);
+  viewerApp.selectItem(viewables[0].data, onItemLoadSuccess, onItemLoadFail);
 
 
 }

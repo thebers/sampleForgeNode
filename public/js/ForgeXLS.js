@@ -171,9 +171,11 @@ var ForgeXLS = {
   },
 
   prepareRawData: function (hierarchy, properties) {
+    console.log(hierarchy);
     var tables = {};
     hierarchy.data.objects[0].objects.forEach(function (category) {
       var idsOnCategory = [];
+      if(typeof category.objects !== 'undefined'){
       ForgeXLS.getAllElementsOnCategory(idsOnCategory, category.objects);
 
       var rows = [];
@@ -182,6 +184,7 @@ var ForgeXLS = {
         rows.push(columns);
       });
       tables[category.name] = rows;
+      }
     });
     return tables;
   },
