@@ -38,6 +38,7 @@ HandleSelectionExtension.prototype.createUI = function () {
         /// get current selection
         var selection = _this.viewer.getSelection();
         _this.viewer.clearSelection();
+        console.log("this is getSelection:",selection)
         // anything selected?
         if (selection.length > 0) {
             // create an array to store dbIds to isolate
