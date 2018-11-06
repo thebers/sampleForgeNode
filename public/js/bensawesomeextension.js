@@ -32,8 +32,8 @@ bensAwesomeExtension.prototype.createUI = function () {
   var _this = this;
  
   // prepare to execute the button action
-  var myAwesomeToolbarButton = new Autodesk.Viewing.UI.Button('runMyAwesomeCode');
-  myAwesomeToolbarButton.onClick = function(e){
+  var benstoolbarbutton = new Autodesk.Viewing.UI.Button('runMyAwesomeCode');
+  benstoolbarbutton.onClick = function(e){
 
     //I could not figure out how to get the URN... I can get it in the viewer.js... but not here for some reason.
     //it appears to return data about the mouse click event, instead of the URN of the model.  (TUTORIAL showed function as downloadXLS... but was actually downloadXLSX in .js)
@@ -57,16 +57,16 @@ bensAwesomeExtension.prototype.createUI = function () {
     alert('I am an extension');
 
   };
-  // myAwesomeToolbarButton CSS class should be defined on your .css file
+  // benstoolbarbutton CSS class should be defined on your .css file
   // you may include icons, below is a sample class:
-  myAwesomeToolbarButton.addClass('bensAwesomeToolbarButton');
-  myAwesomeToolbarButton.setToolTip('Bens Awesome extension');
+  benstoolbarbutton.addClass('bensAwesomeToolbarButton');
+  benstoolbarbutton.setToolTip('Bens Awesome extension');
 
   // SubToolbar
   this.subToolbar = (this.viewer.toolbar.getControl("MyAppToolbar") ?
     this.viewer.toolbar.getControl("MyAppToolbar") :
     new Autodesk.Viewing.UI.ControlGroup('MyAppToolbar'));
-  this.subToolbar.addControl(myAwesomeToolbarButton);
+  this.subToolbar.addControl(benstoolbarbutton);
 
   this.viewer.toolbar.addControl(this.subToolbar);
 };

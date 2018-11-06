@@ -17,7 +17,7 @@ function launchViewer(urn) {
   var documentId = 'urn:' + urn;
   Autodesk.Viewing.Initializer(options, function onInitialized() {
     viewerApp = new Autodesk.Viewing.ViewingApplication('forgeViewer');
-    viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D, { extensions: ['Autodesk.ADN.Viewing.Extension.ScreenShotManager','bensAwesomeExtension', 'HandleSelectionExtension', 'ModelSummaryExtension','MyColorExtension',/*'Autodesk.ADN.Viewing.Extension.MetaProperties','PropertyInspectorExtension'*/, 'Autodesk.ADN.Viewing.Extension.PropertyPanel'] });
+    viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D, { extensions: ['xlsxImporterExtension','Autodesk.ADN.Viewing.Extension.ScreenShotManager','bensAwesomeExtension', 'HandleSelectionExtension', 'ModelSummaryExtension','MyColorExtension',/*'Autodesk.ADN.Viewing.Extension.MetaProperties','PropertyInspectorExtension', 'Autodesk.ADN.Viewing.Extension.PropertyPanel'*/] });
     viewerApp.loadDocument(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
     
     //ben added to test
