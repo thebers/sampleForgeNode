@@ -50,16 +50,34 @@ HandleSelectionExtension.prototype.createUI = function () {
                 // get properties of each dbId
                 _this.viewer.getProperties(dbId, function (props, selectionDBID) {
                     // output on console, for fun...
-                    console.log(props);
+                    //console.log(props);
                     var selectionDBID = props.dbId;
-                    console.log(selectionDBID);
-                    console.log(finalGroupedObjects);
+                    //console.log(selectionDBID);
+                    //console.log(finalGroupedObjects);
 
-                    var obj_selected = {};
-
+                    var obj_selected = _.findWhere(finalGroupedObjects, {dbId: selectionDBID});
+                    console.log(obj_selected);
                     //I need to ... 
                     //...1... identify if an object in finalGroupedObjects has a DBID=selectionDBID [if not=no action, if so...]
                     //...2... set obj_selected = its parent object (store the selections object and work with just it)
+
+                    if (typeof obj_selected !== "undefined") {
+                        // hide existing properties
+                        obj_selected.properties.forEach(function (prop) {
+                            var propObj = {
+                                name: prop.displayName,
+                                value: prop.displayValue,
+                                category: prop.displayCategory,
+                                dataType: 'text'
+                            };
+                            console.log(propObj);
+                            // _panel.addMetaProperty(propObj);
+                        });
+                    } else {
+                        // do nothing for now / keep default props
+                    }
+                    
+
                     //...3... hide existing properties in properties panel [waiting on Stack overflow to answer]
                     //...4... unpack that object into the needed format for displaying as custom properties
                     //...5... once this is working implement instead of the properties button

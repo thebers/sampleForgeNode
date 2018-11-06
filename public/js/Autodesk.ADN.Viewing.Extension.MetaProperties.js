@@ -165,10 +165,10 @@ Autodesk.ADN.Viewing.Extension.MetaProperties = function (viewer, options) {
         filename: 'favicon.png'
       };
 
-      _panel.addMetaProperty(textProp);
-      _panel.addMetaProperty(linkProp);
-      _panel.addMetaProperty(fileProp);
-      _panel.addMetaProperty(imgProp);
+     // _panel.addMetaProperty(textProp);
+      //_panel.addMetaProperty(linkProp);
+     // _panel.addMetaProperty(fileProp);
+     // _panel.addMetaProperty(imgProp);
     };
 
     /////////////////////////////////////////////////////////////////
