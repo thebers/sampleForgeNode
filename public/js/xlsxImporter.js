@@ -2,7 +2,7 @@ var finalGroupedObjects = [];
 
 function xlsxImport (){
     /* set up XMLHttpRequest */
-    var url = "test.xlsx";
+    var url = "/files/test.xlsx";
     var oReq = new XMLHttpRequest();
     oReq.open ("GET", url, true);
     oReq.responseType = "arraybuffer";
