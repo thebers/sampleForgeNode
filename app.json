@@ -7,11 +7,11 @@
     "env": {
       "FORGE_CLIENT_ID": {
         "description": "Replace with your FORGE CLIENT ID KEY",
-        "generator": "public"
+        "value": "public"
       },
       "FORGE_CLIENT_SECRET": {
         "description": "Replace with your FORGE CLIENT SECRET KEY",
-        "generator": "secret"
+        "value": "secret"
       }
     }
 }
